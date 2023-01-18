@@ -9,10 +9,6 @@
 
 # COMMAND ----------
 
-# MAGIC %pip install statsforecast
-
-# COMMAND ----------
-
 # MAGIC %md
 # MAGIC 
 # MAGIC # setup_ray_cluster options
@@ -155,6 +151,12 @@ for r in results:
 
 # COMMAND ----------
 
+# MAGIC %md
+# MAGIC 
+# MAGIC ### Batch Prediction with Actors
+
+# COMMAND ----------
+
 from ray.util.actor_pool import ActorPool
 
 model = load_model()
@@ -175,7 +177,3 @@ while pool.has_next():
 # COMMAND ----------
 
 shutdown_ray_cluster()
-
-# COMMAND ----------
-
-
