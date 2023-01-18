@@ -1,4 +1,8 @@
 # Databricks notebook source
+# MAGIC %run ./00_setup
+
+# COMMAND ----------
+
 # MAGIC %md
 # MAGIC 
 # MAGIC ## [Monte Carlo Example](https://docs.ray.io/en/latest/ray-core/examples/monte_carlo_pi.html)

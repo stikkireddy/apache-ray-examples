@@ -1,6 +1,6 @@
 # Databricks notebook source
 # MAGIC %md
-# MAGIC
+# MAGIC 
 # MAGIC # Install Apache Ray (requires runtime >=12.0)
 
 # COMMAND ----------
@@ -10,10 +10,12 @@
 # COMMAND ----------
 
 # MAGIC %md
-# MAGIC
-# MAGIC # setup_ray_cluster options
-# MAGIC
-# MAGIC
+# MAGIC 
+# MAGIC ## Open 00_setup notebook to see setup details
+# MAGIC 
+# MAGIC ## setup_ray_cluster options
+# MAGIC 
+# MAGIC 
 # MAGIC * **num_worker_nodes**: This argument represents how many ray worker nodes to start
 # MAGIC             for the ray cluster.
 # MAGIC             Specifying the `num_worker_nodes` as `ray.util.spark.MAX_NUM_WORKER_NODES`
@@ -68,7 +70,7 @@ setup_ray_cluster(
 # COMMAND ----------
 
 # MAGIC %md
-# MAGIC
+# MAGIC 
 # MAGIC ### Initialize connection with ray cluster
 
 # COMMAND ----------
