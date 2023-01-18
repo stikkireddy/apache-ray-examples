@@ -5,7 +5,7 @@
 
 # COMMAND ----------
 
-# MAGIC %pip install "ray[default] @ https://ml-team-public-read.s3.us-west-2.amazonaws.com/ray-pkgs/demo0113/ray-3.0.0.dev0-cp39-cp39-linux_x86_64.whl"
+# MAGIC %pip install "ray[default] @ https://ml-team-public-read.s3.us-west-2.amazonaws.com/ray-pkgs/demo0113/ray-3.0.0.dev0-cp39-cp39-linux_x86_64.whl" statsforecast
 
 # COMMAND ----------
 
