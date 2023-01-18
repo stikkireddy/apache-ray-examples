@@ -157,6 +157,31 @@ for r in results:
 
 # COMMAND ----------
 
+import pandas as pd
+import pyarrow.parquet as pq
+import ray
+
+@ray.remote
+class BatchPredictor:
+    def __init__(self, model):
+        self.model = model
+        
+    def predict(self, shard_path):
+        df = pq.read_table(shard_path).to_pandas()
+        result =self.model(df)
+
+        # Write out the prediction result.
+        # NOTE: unless the driver will have to further process the
+        # result (other than simply writing out to storage system),
+        # writing out at remote task is recommended, as it can avoid
+        # congesting or overloading the driver.
+        # ...
+
+        # Here we just return the size about the result in this example.
+        return len(result)
+
+# COMMAND ----------
+
 from ray.util.actor_pool import ActorPool
 
 model = load_model()
@@ -177,3 +202,7 @@ while pool.has_next():
 # COMMAND ----------
 
 shutdown_ray_cluster()
+
+# COMMAND ----------
+
+
